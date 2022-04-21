@@ -1,0 +1,1 @@
+window.onload=function(){let e=[...document.getElementsByClassName("slider-button")];for(let t=0;t<e.length;t++)e[t].addEventListener("click",(function(t){t.preventDefault(),e.forEach((e=>e.classList.remove("active"))),this.classList.add("active")}))};
