@@ -35,6 +35,7 @@ p {
 .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .logo-text {
@@ -130,7 +131,7 @@ p {
 }
 
 .left-start-screen {
-    width: 50%;
+    /* width: 50%; */
 }
 
 .right-start-screen {
@@ -264,6 +265,12 @@ iframe {
     text-align: center;
 }
 
+.card > img {
+    width: 45.79px;
+    width: 45.79px;
+    height: 45.79px;  
+}
+
 .contact-information {
     display: flex;
     justify-content: space-between;
@@ -315,6 +322,7 @@ iframe {
 
 .slider-item>img {
     height: 300.77px;
+    
 }
 
 
@@ -374,8 +382,8 @@ iframe {
     content: "";
     background-image: url('img/vector1.svg');
     position: absolute;
-    width: 70.05px;
-    height: 36.58px;
+    width: 68.05px;
+    height: 21.58px;
     left: 45vw;
     top: 250.31px;
     z-index: -1;
@@ -386,7 +394,7 @@ iframe {
     background-image: url('img/vector2.svg');
     position: absolute;
     width: 70.05px;
-    height: 80.58px;
+    height: 70.58px;
     left: 40vw;
     top: 620.31px;
     z-index: -1;
@@ -396,8 +404,8 @@ iframe {
     content: "";
     background-image: url('img/vector3.svg');
     position: absolute;
-    width: 70.05px;
-    height: 80.58px;
+    width: 50.05px;
+    height: 59px;
     left: 80vw;
     top: 300px;
     z-index: -1;
@@ -519,6 +527,7 @@ iframe {
 
     .main-header {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -528,14 +537,24 @@ iframe {
         flex-direction: column;
     }
 
-    .start-screen {
+    .start-screen, .top-video-section {
         flex-direction: column;
+        align-items: baseline;
     }
 
     .video-section::after, .card-block::before, .left-start-screen::before, .right-start-screen::after, .right-start-screen::before, .left-start-screen>p::before, .left-start-screen>h1::before {
         display: none;
     }
-
-
-
+    .center {
+        width: 90vw;
+    }
+    .client-img {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .contact-information>div {
+        flex-direction: column;
+        align-items: baseline;
+        justify-content: space-around;
+    }
 }
