@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enver</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="normalize-dist.css" /> 
+    <link rel="stylesheet" href="normalize-dist.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="shortcut icon" href="img/Logo.ico" type="image/x-icon" />
   </head>
   <body>
@@ -23,7 +27,9 @@
             <a class="nav-element" href="#projects">Our Project</a>
             <a class="nav-element" href="#">About us</a>
           </nav>
-          <button class="contact-button">Contact us</button>
+          <button class="contact-button" onclick="location.href='#contact';">
+            Contact us
+          </button>
         </div>
       </div>
     </header>
@@ -38,7 +44,11 @@
               such as UI/UX Design to developers, we will provide the best
               <br />service for those of you who use our services.
             </p>
-            <a href="#services" class="start-screen-button" id="header-button-services">
+            <a
+              href="#services"
+              class="start-screen-button"
+              id="header-button-services"
+            >
               Our Services
               <svg
                 width="17"
@@ -130,73 +140,46 @@
               </div>
             </div>
           </div>
-          <div class="center slider-section">
-            <h2 id="projects">Our Awesom Portfolio</h2>
-            <div class="slider-item work-example">
-              <img
-                src="img/work-example1.svg"
-                alt="example1"
-                class="example-work1"
-              />
-              <img
-                src="img/work-example2.svg"
-                alt="example2"
-                class="example-work2"
-              />
-              <img
-                src="img/work-example3.svg"
-                alt="example3"
-                class="example-work3"
-              />
-            </div>
-
-            <div class="slider-item work-example visually-hidden">
-              <img
-                src="img/work-example2.svg"
-                alt="example1"
-                class="example-work1"
-              />
-              <img
-                src="img/work-example1.svg"
-                alt="example2"
-                class="example-work2"
-              />
-              <img
-                src="img/work-example3.svg"
-                alt="example3"
-                class="example-work3"
-              />
-            </div>
-
-            <div class="slider-item work-example visually-hidden">
-              <img
-                src="img/work-example3.svg"
-                alt="example1"
-                class="example-work1"
-              />
-              <img
-                src="img/work-example2.svg"
-                alt="example2"
-                class="example-work2"
-              />
-              <img
-                src="img/work-example1.svg"
-                alt="example3"
-                class="example-work3"
-              />
-            </div>
-            <div class="slider-buttons-container">
-              <div class="slider-button active"></div>
-              <div class="slider-button"></div>
-              <div class="slider-button"></div>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="contact-information">
+      <!-- Slider main container -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/work-example1.svg" alt="work-example">
+            <img src="img/work-example1.svg" alt="work-example">
+            <img src="img/work-example1.svg" alt="work-example">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/work-example2.svg" alt="work-example">
+            <img src="img/work-example2.svg" alt="work-example">
+            <img src="img/work-example2.svg" alt="work-example">
+          </div>
+          <div class="swiper-slide">
+            <img src="img/work-example3.svg" alt="work-example">
+            <img src="img/work-example3.svg" alt="work-example">
+            <img src="img/work-example3.svg" alt="work-example">
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="contact-information" id="contact">
         <div class="center">
-          <h2>Contact us for the service you want to use</h2>
-          <a href="#" class="start-screen-button"> Contact us </a>
+          <div class="contact-heading">
+            <h2>Contact us for the service you want to use</h2>
+            <a class="start-screen-button contact"> Contact us </a>
+          </div>
+          <div class="visually-hidden contact-form hystmodal" id="myModal">
+            <div class="hystmodal__window">
+              <div class="hystmodal-info">
+                <h2>Contact information:</h2>
+                <p>phone: +375 (29) 24-00-985</p>
+                <p>email: leshawin53@gmail.com</p>
+              </div>
+              <button class="close-button contact-button">Close</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -220,6 +203,7 @@
         </div>
       </div>
     </footer>
-    <script src="script-dist.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
