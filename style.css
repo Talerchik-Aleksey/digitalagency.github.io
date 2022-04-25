@@ -391,6 +391,15 @@ iframe {
     margin-bottom: 100px;
 }
 
+.swiper > h2 {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 38.494px;
+    line-height: 53px;
+    margin-bottom: 0;
+}
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
@@ -648,6 +657,9 @@ iframe {
     .card {
         margin: 40px 0 40px 0px;
     }
+    .right-start-screen {
+        width: 100%;
+    }
 }
 
 
@@ -667,5 +679,8 @@ iframe {
     .client-img {
         display: flex;
         justify-content: space-evenly;
+    }
+    .swiper > h2 {
+        margin-bottom: 30px;
     }
 }
