@@ -210,6 +210,11 @@ iframe {
     margin-bottom: 30px;
 }
 
+
+.suggestions-section{
+    margin-top: 100px;
+}
+
 .card-line {
     display: flex;
     justify-content: space-around;
@@ -610,7 +615,12 @@ iframe {
     .swiper-slide img:nth-child(3) {
         display: none;
     }
-
+    .card-line:last-child{
+        margin-top: 0;
+    }
+    .card {
+        margin: 40px 0 40px 0px;
+    }
 }
 
 

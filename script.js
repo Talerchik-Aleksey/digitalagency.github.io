@@ -31,9 +31,12 @@ window.onload = function () {
 };
 
 var swiper = new Swiper(".mySwiper", {
+  speed: 1000,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
 });
+
+AOS.init();
