@@ -642,6 +642,14 @@ iframe {
         width: 100%;
         height: 100%;
         margin-bottom: 40px;
+        animation-name: none;
+    }
+
+    .swiper-slide img:hover {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 40px;
+        animation-name: none;
     }
 
     .swiper-slide img:nth-child(2) {
@@ -664,7 +672,6 @@ iframe {
         width: 100%;
     }
 }
-
 
 @media screen and (max-width: 1380px) {
     .work-example {
