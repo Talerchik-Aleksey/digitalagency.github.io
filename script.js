@@ -1,4 +1,12 @@
 window.onload = function () {
+    window.addEventListener('click', e => { // при клике в любом месте окна браузера
+    const target = e.target // находим элемент, на котором был клик
+    if (!target.closest('.hystmodal__window') && !target.closest('.start-screen-button')) {
+      // если этот элемент или его родительские элементы не окно навигации и не кнопка
+      document.querySelector('.contact-form').classList.add('visually-hidden'); // то закрываем окно навигации, удаляя активный класс
+    }
+  });
+
   let headerMenuLink = [...document.getElementsByClassName("slider-button")];
   let sliderItem = [...document.getElementsByClassName("slider-item")];
   for (let i = 0; i < headerMenuLink.length; i++) {
@@ -28,15 +36,19 @@ window.onload = function () {
   document.querySelector(".close-button").onclick = function () {
     document.querySelector(".contact-form").classList.add("visually-hidden");
   };
+  document.addEventListener("keydown", function (e) {
+    if (e.which === 27) {
+      document.querySelector(".contact-form").classList.add("visually-hidden");
+    }
+  });
+
+  var swiper = new Swiper(".mySwiper", {
+    speed: 1000,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 };
-
-var swiper = new Swiper(".mySwiper", {
-  speed: 1000,
-  spaceBetween: 30,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
 AOS.init();
