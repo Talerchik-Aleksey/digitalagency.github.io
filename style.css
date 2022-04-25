@@ -212,7 +212,7 @@ iframe {
 }
 
 
-.suggestions-section{
+.suggestions-section {
     margin-top: 100px;
 }
 
@@ -391,7 +391,7 @@ iframe {
     margin-bottom: 100px;
 }
 
-.swiper > h2 {
+.swiper>h2 {
     font-family: 'Nunito Sans';
     font-style: normal;
     font-weight: 800;
@@ -651,12 +651,15 @@ iframe {
     .swiper-slide img:nth-child(3) {
         display: none;
     }
-    .card-line:last-child{
+
+    .card-line:last-child {
         margin-top: 0;
     }
+
     .card {
         margin: 40px 0 40px 0px;
     }
+
     .right-start-screen {
         width: 100%;
     }
@@ -680,7 +683,12 @@ iframe {
         display: flex;
         justify-content: space-evenly;
     }
-    .swiper > h2 {
+
+    .swiper>h2 {
         margin-bottom: 30px;
+    }
+
+    .swiper-slide img:hover {
+        animation-name: none;
     }
 }
