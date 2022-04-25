@@ -1,9 +1,14 @@
 window.onload = function () {
-    window.addEventListener('click', e => { // при клике в любом месте окна браузера
-    const target = e.target // находим элемент, на котором был клик
-    if (!target.closest('.hystmodal__window') && !target.closest('.start-screen-button')) {
+  AOS.init();
+  window.addEventListener("click", (e) => {
+    // при клике в любом месте окна браузера
+    const target = e.target; // находим элемент, на котором был клик
+    if (
+      !target.closest(".hystmodal__window") &&
+      !target.closest(".start-screen-button")
+    ) {
       // если этот элемент или его родительские элементы не окно навигации и не кнопка
-      document.querySelector('.contact-form').classList.add('visually-hidden'); // то закрываем окно навигации, удаляя активный класс
+      document.querySelector(".contact-form").classList.add("visually-hidden"); // то закрываем окно навигации, удаляя активный класс
     }
   });
 
@@ -51,4 +56,3 @@ window.onload = function () {
     },
   });
 };
-AOS.init();
