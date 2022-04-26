@@ -61,7 +61,7 @@ window.onload = function () {
 document.addEventListener("DOMContentLoaded", () => {
   var cleave = new Cleave(".input-element-phone", {
     phone: true,
-    phoneRegionCode: "{country}",
+    phoneRegionCode: "{+375}",
   });
   var cleave = new Cleave(".input-element-card", {
     creditCard: true,
@@ -85,5 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
       en: "Please enter a valid email address.",
     },
   });
-  $('#form').parsley();
+  
+  $("#form").parsley();
 });
