@@ -38,9 +38,10 @@ window.onload = function () {
     document.querySelector(".contact-form").classList.remove("visually-hidden");
   };
 
-  document.querySelector(".close-button").onclick = function () {
-    document.querySelector(".contact-form").classList.add("visually-hidden");
-  };
+  // document.querySelector(".close-button").onclick = function () {
+  //   document.querySelector(".contact-form").classList.add("visually-hidden");
+  // };
+
   document.addEventListener("keydown", function (e) {
     if (e.which === 27) {
       document.querySelector(".contact-form").classList.add("visually-hidden");
@@ -56,3 +57,33 @@ window.onload = function () {
     },
   });
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  var cleave = new Cleave(".input-element-phone", {
+    phone: true,
+    phoneRegionCode: "{country}",
+  });
+  var cleave = new Cleave(".input-element-card", {
+    creditCard: true,
+    onCreditCardTypeChanged: function (type) {
+      // update UI ...
+    },
+  });
+  var cleave = new Cleave(".input-element-date", {
+    date: true,
+    delimiter: "-",
+    datePattern: ["Y", "m", "d"],
+  });
+
+  window.Parsley.addValidator("validateFullWidthCharacters", {
+    requirementType: "string",
+    validateString: function (value, requirement) {
+      regex = /^([a-z0-9_\.-]+\@[\da-z\.-]+\.[a-z\.]{2,6})$/gm;
+      return regex.test(value);
+    },
+    messages: {
+      en: "Please enter a valid email address.",
+    },
+  });
+  $('#form').parsley();
+});

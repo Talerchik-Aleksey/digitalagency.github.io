@@ -344,6 +344,10 @@ iframe {
     font-size: 20px;
 }
 
+.close-button > img {
+    width: 5%;
+}
+
 .hystmodal__window h2 {
     text-align: center;
     font-family: 'Graphik';
@@ -363,11 +367,15 @@ iframe {
 }
 
 .hystmodal-info {
-    padding: 25px;
+    padding: 25px 60px 25px 60px;
 }
 
 .hystmodal-info>p:last-child {
     padding-bottom: 200px;
+}
+
+.hystmodal-info>input {
+    width: 100%;
 }
 
 .footer-section {
@@ -458,6 +466,14 @@ iframe {
     border: 0;
 
     clip: rect(0 0 0 0);
+}
+
+.parsley-errors-list{
+    color: red;
+    font-family: 'Nunito Sans';
+    font-weight: 400;
+    width: 243px;
+    word-wrap: normal;
 }
 
 
