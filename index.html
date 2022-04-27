@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enver</title>
-    <link rel="stylesheet" href="style-dist.css" />
-    <link rel="stylesheet" href="normalize-dist.css" /> 
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="normalize-dist.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/Logo.ico" type="image/x-icon" />
   </head>
   <body>
@@ -19,11 +24,13 @@
           </div>
           <nav class="nav">
             <a class="nav-element" href="#">Home</a>
-            <a class="nav-element" href="#">Services</a>
-            <a class="nav-element" href="#">Our Project</a>
+            <a class="nav-element" href="#services">Services</a>
+            <a class="nav-element" href="#projects">Our Project</a>
             <a class="nav-element" href="#">About us</a>
           </nav>
-          <button class="contact-button">Contact us</button>
+          <button class="contact-button" onclick="location.href='#contact';">
+            Contact us
+          </button>
         </div>
       </div>
     </header>
@@ -38,7 +45,11 @@
               such as UI/UX Design to developers, we will provide the best
               <br />service for those of you who use our services.
             </p>
-            <a href="#" class="start-screen-button" id="header-button-services">
+            <a
+              href="#services"
+              class="start-screen-button"
+              id="header-button-services"
+            >
               Our Services
               <svg
                 width="17"
@@ -61,7 +72,7 @@
           </div>
         </div>
 
-        <div class="video-section">
+        <div class="video-section" data-aos="fade-up">
           <div class="top-video-section">
             <h2>Why Enver Is The<br />Best Choice</h2>
             <p>
@@ -78,8 +89,8 @@
           ></iframe>
         </div>
 
-        <div class="suggestions-section">
-          <h2>The Service We Provide<br />For You</h2>
+        <div class="suggestions-section" data-aos="fade-up">
+          <h2 id="services">The Service We Provide<br />For You</h2>
           <div class="card-block">
             <div class="card-line">
               <div class="card">
@@ -130,73 +141,84 @@
               </div>
             </div>
           </div>
-          <div class="center slider-section">
-            <h2>Our Awesom Portfolio</h2>
-            <div class="slider-item work-example">
-              <img
-                src="img/work-example1.svg"
-                alt="example1"
-                class="example-work1"
-              />
-              <img
-                src="img/work-example2.svg"
-                alt="example2"
-                class="example-work2"
-              />
-              <img
-                src="img/work-example3.svg"
-                alt="example3"
-                class="example-work3"
-              />
-            </div>
-
-            <div class="slider-item work-example visually-hidden">
-              <img
-                src="img/work-example2.svg"
-                alt="example1"
-                class="example-work1"
-              />
-              <img
-                src="img/work-example1.svg"
-                alt="example2"
-                class="example-work2"
-              />
-              <img
-                src="img/work-example3.svg"
-                alt="example3"
-                class="example-work3"
-              />
-            </div>
-
-            <div class="slider-item work-example visually-hidden">
-              <img
-                src="img/work-example3.svg"
-                alt="example1"
-                class="example-work1"
-              />
-              <img
-                src="img/work-example2.svg"
-                alt="example2"
-                class="example-work2"
-              />
-              <img
-                src="img/work-example1.svg"
-                alt="example3"
-                class="example-work3"
-              />
-            </div>
-            <div class="slider-buttons-container">
-              <div class="slider-button active"></div>
-              <div class="slider-button"></div>
-              <div class="slider-button"></div>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="contact-information">
+      <!-- Slider main container -->
+      <div class="swiper mySwiper" data-aos="fade-up" id="projects">
+        <h2>Our Awesome Portofolio</h2>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="img/work-example1.svg" alt="work-example" />
+            <img src="img/work-example1.svg" alt="work-example" />
+            <img src="img/work-example1.svg" alt="work-example" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/work-example2.svg" alt="work-example" />
+            <img src="img/work-example2.svg" alt="work-example" />
+            <img src="img/work-example2.svg" alt="work-example" />
+          </div>
+          <div class="swiper-slide">
+            <img src="img/work-example3.svg" alt="work-example" />
+            <img src="img/work-example3.svg" alt="work-example" />
+            <img src="img/work-example3.svg" alt="work-example" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="contact-information" id="contact">
         <div class="center">
-          <h2>Contact us for the service you want to use</h2>
-          <a href="#" class="start-screen-button"> Contact us </a>
+          <div class="contact-heading">
+            <h2>Contact us for the service you want to use</h2>
+            <a class="start-screen-button contact"> Contact us </a>
+          </div>
+          <div class="visually-hidden contact-form hystmodal" id="myModal">
+            <div class="hystmodal__window">
+              <form id="form" data-parsley-validate>
+                <div class="hystmodal-info">
+                  <h2>Contact form:</h2>
+                  <p>Enter your phone(with +375):</p>
+                  <input
+                    class="input-element-phone"
+                    type="text"
+                    required
+                    minlength="17"
+                  />
+                  <p>Enter your mail:</p>
+                  <input
+                    placeholder="e.g. mail@example.com"
+                    class="form-control parsley-success"
+                    id="user_email"
+                    data-parsley-required=""
+                    data-parsley-type="email"
+                    data-parsley-validate-full-width-characters="true"
+                    type="text"
+                    value=""
+                    name="user[email]"
+                    data-parsley-id="17"
+                    required
+                  />
+                  <p>Which service do you want use:</p>
+                  <input class="input-element-services" type="text" required />
+                  <p>Bank-card:</p>
+                  <input
+                    class="input-element-card"
+                    type="text"
+                    required
+                    minlength="19"
+                  />
+                  <p>Expiration dates:</p>
+                  <input
+                    class="input-element-date"
+                    type="text"
+                    required
+                    minlength="10"
+                  />
+                </div>
+                <button class="close-button contact-button">Send🡭</button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
     </main>
@@ -220,6 +242,22 @@
         </div>
       </div>
     </footer>
-    <script src="script-dist.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
+      integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/addons/cleave-phone.by.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
