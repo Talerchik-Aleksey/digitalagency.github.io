@@ -177,14 +177,15 @@
               <form id="form" data-parsley-validate>
                 <div class="hystmodal-info">
                   <h2>Contact form:</h2>
-                  <p>Enter your phone(with +375):</p>
+                  <label for="phone">Enter your phone(with +375):</label>
                   <input
                     class="input-element-phone"
+                    id="phone"
                     type="text"
                     required
                     minlength="17"
                   />
-                  <p>Enter your mail:</p>
+                  <label for="user_email">Enter your mail:</label>
                   <input
                     placeholder="e.g. mail@example.com"
                     class="form-control parsley-success"
@@ -198,18 +199,20 @@
                     data-parsley-id="17"
                     required
                   />
-                  <p>Which service do you want use:</p>
-                  <input class="input-element-services" type="text" required />
-                  <p>Bank-card:</p>
+                  <label for="services">Which service do you want use:</label>
+                  <input class="input-element-services" id="services" type="text" required />
+                  <label for="card">Bank-card:</label>
                   <input
                     class="input-element-card"
+                    id="card"
                     type="text"
                     required
                     minlength="19"
                   />
-                  <p>Expiration dates:</p>
+                  <label for="date">Expiration dates:</label>
                   <input
                     class="input-element-date"
+                    id="date"
                     type="text"
                     required
                     minlength="10"
