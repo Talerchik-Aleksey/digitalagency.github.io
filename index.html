@@ -5,139 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enver</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="normalize-dist.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="css/normalize-dist.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="shortcut icon" href="img/Logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style-dist.css" />
+    <script src="https://kit.fontawesome.com/a1cdd20625.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <div class="center">
         <div class="main-header">
-          <div class="logo">
+          <a class="logo" href="">
             <img src="img/Logo-Icon.svg" alt="logo" />
             <p class="logo-text">Enver</p>
-          </div>
+          </a>
           <nav class="nav">
-            <a class="nav-element" href="#">Home</a>
+            <a class="nav-element" href="">Home</a>
             <a class="nav-element" href="#services">Services</a>
             <a class="nav-element" href="#projects">Our Project</a>
-            <a class="nav-element" href="#">About us</a>
+            <a class="nav-element" href="">About us</a>
           </nav>
-          <button class="contact-button" onclick="location.href='#contact';">
-            Contact us
-          </button>
+          <button class="contact-button" onclick="location.href='#contact';"> Contact us </button>
         </div>
       </div>
     </header>
-
     <main>
       <div class="center">
         <div class="start-screen">
           <div class="left-start-screen">
-            <h1>Build Your<br />Awesome<br />Platform</h1>
-            <p>
-              Enver studio is a digital studio that offers several services<br />
-              such as UI/UX Design to developers, we will provide the best
-              <br />service for those of you who use our services.
-            </p>
-            <a
-              href="#services"
-              class="start-screen-button"
-              id="header-button-services"
-            >
-              Our Services
-              <svg
-                width="17"
-                height="17"
-                viewBox="0 0 17 17"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6.17263 4.9642C6.17263 4.59765 6.46977 4.30051 6.83632 4.30051L12.1458 4.30051C12.5124 4.30051 12.8095 4.59765 12.8095 4.9642V10.2737C12.8095 10.6403 12.5124 10.9374 12.1458 10.9374C11.7793 10.9374 11.4821 10.6403 11.4821 10.2737V6.56649L5.97824 12.0704C5.71905 12.3296 5.29882 12.3296 5.03964 12.0704C4.78045 11.8112 4.78045 11.391 5.03964 11.1318L10.5435 5.62789L6.83632 5.62789C6.46977 5.62789 6.17263 5.33074 6.17263 4.9642Z"
-                  fill="white"
-                  id="arrow"
-                />
-              </svg>
-            </a>
+            <h1>Build Your Awesome Platform </h1>
+            <p> Enver studio is a digital studio that offers several services  such as UI/UX Design to developers, we will provide the best service for those of you who use our services. </p>
+            <a href="#services" class="start-screen-button" id="header-button-services"> Our Services 🡭 </a>
           </div>
-
           <div class="right-start-screen">
             <img src="img/client.png" alt="client" class="client-img" />
           </div>
         </div>
-
         <div class="video-section" data-aos="fade-up">
           <div class="top-video-section">
-            <h2>Why Enver Is The<br />Best Choice</h2>
-            <p>
-              Watch this one minute video so you understand why you should<br />use
-              our services!
-            </p>
+            <h2>Why Enver Is The <br />Best Choice </h2>
+            <p> Watch this one minute video so you understand why you should <br />use our services! </p>
           </div>
-          <iframe
+          <video autoplay muted>
+            <source src="img/video/About-company.mp4" type="video/mp4" /> Your browser does not support the video tag.
+          </video>
+          <!-- <iframe
             src="https://www.youtube.com/embed/qvnLdbUdUzo"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
-          ></iframe>
+          ></iframe> -->
         </div>
-
         <div class="suggestions-section" data-aos="fade-up">
-          <h2 id="services">The Service We Provide<br />For You</h2>
+          <h2 id="services">The Service We Provide <br />For You </h2>
           <div class="card-block">
             <div class="card-line">
               <div class="card">
                 <img src="img/dev-Icon.svg" alt="" />
                 <h3>Development</h3>
-                <p>
-                  Create a platform with the best and coolest quality from us.
-                </p>
+                <p> Create a platform with the best and coolest quality from us. </p>
               </div>
               <div class="card">
                 <img src="img/UX-icon.svg" alt="" />
                 <h3>UI/UX Designer</h3>
-                <p>
-                  We provide UI/UX Design services, and of course with the best
-                  quality
-                </p>
+                <p> We provide UI/UX Design services, and of course with the best quality </p>
               </div>
               <div class="card">
                 <img src="img/graphic-icon.svg" alt="" />
                 <h3>Graphik Designer</h3>
-                <p>
-                  We provide Graphic Design services, with the best designers
-                </p>
+                <p> We provide Graphic Design services, with the best designers </p>
               </div>
             </div>
             <div class="card-line">
               <div class="card">
                 <img src="img/motion-icon.svg" alt="" />
                 <h3>Motion Graphik</h3>
-                <p>
-                  Create a platform with the best and coolest quality from us.
-                </p>
+                <p> Create a platform with the best and coolest quality from us. </p>
               </div>
               <div class="card">
                 <img src="img/photography-icon.svg" alt="" />
                 <h3>Photography</h3>
-                <p>
-                  We provide Photography services, and of course with the best
-                  quality
-                </p>
+                <p> We provide Photography services, and of course with the best quality </p>
               </div>
               <div class="card">
                 <img src="img/videography-icon.svg" alt="" />
                 <h3>Videography</h3>
-                <p>
-                  Create a platform with the best and coolest quality from us.
-                </p>
+                <p> Create a platform with the best and coolest quality from us. </p>
               </div>
             </div>
           </div>
@@ -165,7 +120,6 @@
         </div>
         <div class="swiper-pagination"></div>
       </div>
-
       <div class="contact-information" id="contact">
         <div class="center">
           <div class="contact-heading">
@@ -176,47 +130,18 @@
             <div class="hystmodal__window">
               <form id="form" data-parsley-validate>
                 <div class="hystmodal-info">
+                  <i class="fa-solid fa-xmark"></i>
                   <h2>Contact form:</h2>
                   <label for="phone">Enter your phone(with +375):</label>
-                  <input
-                    class="input-element-phone"
-                    id="phone"
-                    type="text"
-                    required
-                    minlength="17"
-                  />
+                  <input class="input-element-phone" id="phone" type="text" required minlength="17" />
                   <label for="user_email">Enter your mail:</label>
-                  <input
-                    placeholder="e.g. mail@example.com"
-                    class="form-control parsley-success"
-                    id="user_email"
-                    data-parsley-required=""
-                    data-parsley-type="email"
-                    data-parsley-validate-full-width-characters="true"
-                    type="text"
-                    value=""
-                    name="user[email]"
-                    data-parsley-id="17"
-                    required
-                  />
-                  <label for="services">Which service do you want use:</label>
-                  <input class="input-element-services" id="services" type="text" required />
+                  <input placeholder="e.g. mail@example.com" class="form-control parsley-success" id="user_email" data-parsley-required="" data-parsley-type="email" data-parsley-validate-full-width-characters="true" type="text" value="" name="user[email]" data-parsley-id="17" required />
+                  <label for="services-input">Which service do you want use:</label>
+                  <input class="input-element-services" id="services-input" type="text" required />
                   <label for="card">Bank-card:</label>
-                  <input
-                    class="input-element-card"
-                    id="card"
-                    type="text"
-                    required
-                    minlength="19"
-                  />
+                  <input class="input-element-card" id="card" type="text" required minlength="19" />
                   <label for="date">Expiration dates:</label>
-                  <input
-                    class="input-element-date"
-                    id="date"
-                    type="text"
-                    required
-                    minlength="10"
-                  />
+                  <input class="input-element-date" id="date" type="text" required minlength="10" />
                 </div>
                 <button class="close-button contact-button">Send🡭</button>
               </form>
@@ -229,10 +154,10 @@
       <div class="center">
         <div class="footer-section">
           <div>
-            <div class="logo">
+            <a class="logo" href="">
               <img src="img/Logo-Icon.svg" alt="logo" />
               <p class="logo-text">Enver</p>
-            </div>
+            </a>
           </div>
           <div class="nav footer-links">
             <a href="#" class="nav-element">Support</a>
@@ -245,22 +170,12 @@
         </div>
       </div>
     </footer>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js"
-      integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/addons/cleave-phone.by.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="js/script-dist.js"></script>
   </body>
 </html>
